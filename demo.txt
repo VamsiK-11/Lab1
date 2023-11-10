@@ -1,0 +1,9 @@
+FROM python:latest
+WORKDIR /app
+COPY add.py /app
+CMD ["python","add.py"]
+
+
+FROM nginx
+COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80
